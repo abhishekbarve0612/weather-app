@@ -1,7 +1,7 @@
 import {Container, Form, Button, Alert} from 'react-bootstrap';
 import {useState, useEffect, useRef} from 'react';
 import './style.css';
-const CityInput = ({city, setCity, fetchWeather}) => {
+const CityInput = ({city, setCity, fetchWeather, setWeather}) => {
   const [error, setError] = useState(null);
   const inputRef = useRef();
   const handleInputClick = () => {
@@ -13,6 +13,7 @@ const CityInput = ({city, setCity, fetchWeather}) => {
     e.preventDefault();
     if (!city){
       setError("City is Empty!");
+      setWeather(null);
     } else {
       setError(null);
       fetchWeather();

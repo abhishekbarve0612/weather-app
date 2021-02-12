@@ -23,6 +23,7 @@ function App() {
         } else {
         console.log(result.message);
         setWeather(result);
+        setErr(null);
         }
       }
     )
@@ -30,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <h3>Weather App</h3>
-      <CityInput city={city} setCity={setCity} fetchWeather={fetchWeather} />
+      <CityInput city={city} setCity={setCity} setWeather={setWeather} fetchWeather={fetchWeather} />
       <CityWeather weather={weather} errorMessage={err} />
     </div>
   );
