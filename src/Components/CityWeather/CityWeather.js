@@ -1,9 +1,12 @@
-import { Container, Table } from "react-bootstrap";
+import { Container, Table, Alert } from "react-bootstrap";
 
-const CityWeather = ({weather}) => {
+const CityWeather = ({weather, errorMessage}) => {
+  console.log(errorMessage, "AAAAAAAAAAAAAAA");
   return ( 
     <Container>
-        <Table striped bordered hover>
+      
+      { errorMessage && <Alert variant="danger">{errorMessage}</Alert> }
+       {weather && <Table striped bordered hover>
           <thead>
             <tr>
               <th>#</th>
@@ -56,7 +59,7 @@ const CityWeather = ({weather}) => {
             </tr>
           </tbody>
         </Table>
-    </Container>
+    }</Container>
    );
 }
  
