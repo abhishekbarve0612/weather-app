@@ -1,0 +1,13 @@
+.city-input {
+  padding: 20px;
+  margin: 10px;
+}
+
+.fetch-weather {
+  background-color: aquamarine;
+  color: black;
+  text-transform: uppercase;
+  border: none;
+  padding: 20px;
+  margin: 10px;
+}
