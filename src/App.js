@@ -10,7 +10,7 @@ function App() {
   const [weather, setWeather] = useState(null);
   const apiKey = "52f15b89c53a03a1171aac50634a0192";
   const fetchWeather = () => {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`).then(
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`).then(
       (res) => res.json()
     ).then(
       (result) => {
